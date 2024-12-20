@@ -25,12 +25,6 @@ public class SettingsPanel : MonoBehaviour
     
     [SerializeField] 
     private Button rateUsButton;
-    [SerializeField] 
-    private Button bugReportButton;
-    [SerializeField] 
-    private string rateUsURL;
-    [SerializeField]
-    private string bugReportURL;
 
     [Space(13)]
     
@@ -98,15 +92,7 @@ public class SettingsPanel : MonoBehaviour
         {
             rateUsButton.onClick.AddListener(() =>
             {
-                Application.OpenURL(rateUsURL);
-            });
-        }
-
-        if (bugReportButton != null)
-        {
-            bugReportButton.onClick.AddListener(() =>
-            {
-                Application.OpenURL(bugReportURL);
+                Application.OpenURL("https://play.google.com/store/apps/details?id=com.qybity.shadowseekers");
             });
         }
     }
